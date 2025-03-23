@@ -1,6 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorerBE", "FlagExplorerBE\FlagExplorerBE.csproj", "{22D3132E-86AD-4C45-B3AC-FBA391F55EA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorer.API", "FlagExplorer.API\FlagExplorer.API.csproj", "{22D3132E-86AD-4C45-B3AC-FBA391F55EA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorer.Application", "FlagExplorer.Application\FlagExplorer.Application.csproj", "{ECEE2250-67FF-424C-86FC-BBB974F634C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorer.Domain", "FlagExplorer.Domain\FlagExplorer.Domain.csproj", "{5DBFFAA8-FAEC-4F17-9ADF-713BB0A01B2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorer.Infrastructure", "FlagExplorer.Infrastructure\FlagExplorer.Infrastructure.csproj", "{9F885252-76FB-49E0-88B2-3747DA06E7FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorer.Persistence", "FlagExplorer.Persistence\FlagExplorer.Persistence.csproj", "{B134456A-5F08-44E8-BD33-38FF493714F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorer.Tests.Unit", "FlagExplorer.Tests.Unit\FlagExplorer.Tests.Unit.csproj", "{003E70DE-E342-454B-974A-BFC989F8122C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorer.Tests.Integration", "FlagExplorer.Tests.Integration\FlagExplorer.Tests.Integration.csproj", "{1DAA2ED8-BC3A-4FAC-91C9-10286A6DA2B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +24,29 @@ Global
 		{22D3132E-86AD-4C45-B3AC-FBA391F55EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22D3132E-86AD-4C45-B3AC-FBA391F55EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22D3132E-86AD-4C45-B3AC-FBA391F55EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECEE2250-67FF-424C-86FC-BBB974F634C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEE2250-67FF-424C-86FC-BBB974F634C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEE2250-67FF-424C-86FC-BBB974F634C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEE2250-67FF-424C-86FC-BBB974F634C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DBFFAA8-FAEC-4F17-9ADF-713BB0A01B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBFFAA8-FAEC-4F17-9ADF-713BB0A01B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBFFAA8-FAEC-4F17-9ADF-713BB0A01B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBFFAA8-FAEC-4F17-9ADF-713BB0A01B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F885252-76FB-49E0-88B2-3747DA06E7FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F885252-76FB-49E0-88B2-3747DA06E7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F885252-76FB-49E0-88B2-3747DA06E7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F885252-76FB-49E0-88B2-3747DA06E7FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B134456A-5F08-44E8-BD33-38FF493714F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B134456A-5F08-44E8-BD33-38FF493714F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B134456A-5F08-44E8-BD33-38FF493714F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B134456A-5F08-44E8-BD33-38FF493714F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{003E70DE-E342-454B-974A-BFC989F8122C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003E70DE-E342-454B-974A-BFC989F8122C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003E70DE-E342-454B-974A-BFC989F8122C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003E70DE-E342-454B-974A-BFC989F8122C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DAA2ED8-BC3A-4FAC-91C9-10286A6DA2B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAA2ED8-BC3A-4FAC-91C9-10286A6DA2B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAA2ED8-BC3A-4FAC-91C9-10286A6DA2B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAA2ED8-BC3A-4FAC-91C9-10286A6DA2B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
