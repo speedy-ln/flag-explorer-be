@@ -1,0 +1,6 @@
+@FlagExplorerBE_HostAddress = http://localhost:5226
+
+GET {{FlagExplorerBE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
