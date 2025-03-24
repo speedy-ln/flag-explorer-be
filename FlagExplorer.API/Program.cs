@@ -1,9 +1,20 @@
+using FlagExplorer.Application.MappingProfiles;
+using FlagExplorer.Infrastructure.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(CountryProfile).Assembly);
+builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblyContaining<CountryProfile>());
+builder.Services.AddInfrastructureServices();
+builder.Services.AddControllers();
+builder.Services.AddSwaggerGen(config =>
+{
+    config.SwaggerDoc("v1", new() { Title = "Country API", Version = "v1" });
+});
+
 
 var app = builder.Build();
 
@@ -15,26 +26,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
+app.UseAuthorization();
+app.MapControllers();
 
 app.Run();
 

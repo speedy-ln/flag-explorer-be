@@ -6,7 +6,7 @@ using MediatR;
 
 namespace FlagExplorer.Application.Handlers;
 
-public class GetCountryByNameHandler : IRequestHandler<GetCountryByNameQuery, CountryDto?>
+public class GetCountryByNameHandler : IRequestHandler<GetCountryByNameQuery, CountryDetailsDto?>
 {
     private readonly ICountryRepository _repository;
     private readonly IMapper _mapper;
@@ -17,9 +17,9 @@ public class GetCountryByNameHandler : IRequestHandler<GetCountryByNameQuery, Co
         _mapper = mapper;
     }
 
-    public async Task<CountryDto?> Handle(GetCountryByNameQuery request, CancellationToken cancellationToken)
+    public async Task<CountryDetailsDto?> Handle(GetCountryByNameQuery request, CancellationToken cancellationToken)
     {
         var country = await _repository.GetByNameAsync(request.Name);
-        return country is null ? null :  _mapper.Map<CountryDto>(country);
+        return country is null ? null :  _mapper.Map<CountryDetailsDto>(country);
     }
 }
